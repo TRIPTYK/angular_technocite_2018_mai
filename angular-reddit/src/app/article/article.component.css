@@ -1,0 +1,47 @@
+article {
+    margin: 3rem auto 0 auto;
+    max-width: 500px;
+}
+
+.leftCol {
+    display: inline-block;
+    vertical-align: top;
+    width: 100px;
+    background-color: #dfdfdf;
+    padding: 1rem;
+    border-radius: 4px;
+    font-family: Verdana;
+}
+
+.rightCol {
+    display: inline-block;
+    vertical-align: top;
+    width: 300px;
+    padding: 0 1rem;
+    font-family: Verdana;
+}
+
+.title {
+    font-size: 1.2rem;
+    color: #000;
+    margin: 0;
+}
+
+.title span {
+    font-size: 0.7em;
+    border-bottom: 1px dotted #000;
+}
+
+ul {
+    margin: 0.5rem 0 0 0;
+    padding: 0;
+    list-style: none;
+}
+
+li a {
+    color: coral;
+}
+
+a {
+    text-decoration: none;
+}
