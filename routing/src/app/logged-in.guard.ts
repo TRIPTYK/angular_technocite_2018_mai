@@ -5,6 +5,7 @@ import { Observable } from 'rxjs/Observable';
 
 @Injectable()
 export class LoggedInGuard implements CanActivate {
+  urlToGo:string;
   constructor(private router: Router, private userService: UserService){}
   canActivate(
     next: ActivatedRouteSnapshot,
@@ -13,7 +14,10 @@ export class LoggedInGuard implements CanActivate {
     if (this.userService.isLoggedIn()){
       return true;
      } else  {
-       this.router.navigateByUrl('login');
+      this.urlToGo = state.url;
+       this.router.navigate(['login'], {
+         queryParams: { returnUrl: state.url }
+       });
        return false;
      }
   }

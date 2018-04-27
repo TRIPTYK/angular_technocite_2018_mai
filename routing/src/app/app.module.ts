@@ -24,10 +24,18 @@ import { MatFormFieldModule } from "@angular/material/form-field";
 
 const routes: Routes = [
   { path: "", redirectTo: "home", pathMatch: "full" },
-  { path: "about", component: AboutComponent },
+  {
+    path: "about",
+    canActivate: [AuthGuard, LoggedInGuard],
+    component: AboutComponent
+  },
   { path: "home", component: HomeComponent },
   { path: "login", component: LoginComponent },
-  { path: "private", canActivate: [AuthGuard, LoggedInGuard], component: PrivateComponent }
+  {
+    path: "private",
+    canActivate: [AuthGuard, LoggedInGuard],
+    component: PrivateComponent
+  }
 ];
 @NgModule({
   declarations: [
