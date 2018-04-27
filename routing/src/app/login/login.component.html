@@ -1,1 +1,14 @@
 <h2>Login Form</h2>
+<section>
+  <form [formGroup]="loginForm" (ngSubmit)="onSubmit(loginForm.value)">
+    <mat-form-field>
+      <input type="text" matInput placeholder="user" [formControl]="loginForm.controls['user']">
+      <mat-error *ngIf="loginForm.controls['user'].invalid">{{getValidationError('user')}}</mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <input type="text" matInput placeholder="password" [formControl]="loginForm.controls['password']">
+      <mat-error *ngIf="loginForm.controls['password'].invalid">{{getValidationError('password')}}</mat-error>
+    </mat-form-field>
+    <button mat-raised-button color="primary" [disabled]="!loginForm.valid">Submit</button>
+  </form>
+</section>
