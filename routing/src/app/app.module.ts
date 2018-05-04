@@ -18,21 +18,21 @@ import { RouterModule, Routes } from '@angular/router';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import { MatButtonModule} from '@angular/material/button';
 import {MatCardModule} from '@angular/material/card';
-import { MatInputModule } from "@angular/material/input";
-import { MatFormFieldModule } from "@angular/material/form-field";
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
 
 
 const routes: Routes = [
-  { path: "", redirectTo: "home", pathMatch: "full" },
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
   {
-    path: "about",
+    path: 'about',
     canActivate: [AuthGuard, LoggedInGuard],
     component: AboutComponent
   },
-  { path: "home", component: HomeComponent },
-  { path: "login", component: LoginComponent },
+  { path: 'home', component: HomeComponent },
+  { path: 'login', component: LoginComponent },
   {
-    path: "private",
+    path: 'private',
     canActivate: [AuthGuard, LoggedInGuard],
     component: PrivateComponent
   }

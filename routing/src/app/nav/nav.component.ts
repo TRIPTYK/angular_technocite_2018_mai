@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavComponent implements OnInit {
 
-  constructor(public userService : UserService) { }
+  constructor(public userService: UserService) { }
 
   ngOnInit() {
   }

@@ -9,7 +9,7 @@ export class UserService {
     return this.loggedIn;
   }
   validateCredentials(user: any) {
-    if(user.user === 'gilles' && user.password === 'password'){
+    if (user.user === 'gilles' && user.password === 'password') {
       this.loggedIn = true;
       return this.loggedIn;
     }
